@@ -6,7 +6,8 @@ app=Flask(__name__)
 def pagina2():
     data2={
         'titulo':'pagina 2',
-        'mensaje':'Bienvenido al sitio Web, se encuentra en la segunda página'
+        'mensaje':'Bienvenido al sitio Web, se encuentra en la segunda página',
+        'nombre':'Claudino brishel Lopez Acosta'
     }
     return render_template('index.html', data=data2)
 @app.route('/')
