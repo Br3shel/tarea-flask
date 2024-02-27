@@ -8,18 +8,23 @@
 
 {% block body %}
 <div class="container">
-    <form class="form-signin text-center mx-auto">
+    <form class="form-signin text-center mx-auto" action="/login" method="POST">
       <img class="mb-4" src="{{ url_for('static', filename='img/sesion2.png') }}" alt="" width="137" height="91">
       <h1 class="h3 mb-3 fw-normal">Ingrese sus datos</h1>
       <div class="form-floating">
-        <input type="email" class="form-control" id="Input" placeholder="name@example.com">
+        <input type="email" class="form-control" id="username" name="username" placeholder="name@example.com">
         <label for="Input">Ingresar Email</label>
       </div>
       <div class="form-floating mt-2">
-        <input type="password" class="form-control" id="Password" placeholder="Password">
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
         <label for="Password">Contraseña</label>
       </div>
       <button class="btn btn-primary w-100 py-2" type="submit">Iniciar Sesión</button>
     </form>
-</div>    
+</div> 
+
+<div>
+  <p>{{correo}}</pp>
+    <p>{{Password}}</pp>
+</div>
 {% endblock %}
