@@ -11,11 +11,15 @@
               <p class="card-text lead">Nos alegra que estés aquí.</p>
               <hr>
               <div class="row justify-content-center">
+                  <div class="col-md-6">
+                      <img src="{{ url_for('static', filename='img/demostracion.jpg') }}" class="rounded mx-auto d-block img-fluid max-width-75" alt="Imagen 1">
+                  </div>
+                  <div class="col-md-6">
+                      <img src="{{ url_for('static', filename='img/verificado.jpg') }}" class="rounded mx-auto d-block img-fluid max-width-75" alt="Imagen 2">
+                  </div>
               </div>
           </div>
       </div>
   </div>
 </div>
-
-
 {% endblock %}

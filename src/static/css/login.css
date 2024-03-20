@@ -27,3 +27,8 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+.icono-usuario {
+  width: 10px; /* Ajusta el ancho según sea necesario */
+  height: 10px; /* Ajusta la altura según sea necesario */
+}

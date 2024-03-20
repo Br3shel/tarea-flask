@@ -30,12 +30,24 @@
             <div class="text-end">
               {% if 'email' in session %}
               
-                <button type="button" class="btn btn-danger me-2" data-bs-toggle="modal" data-bs-target="#logoutModal">Cerrar sesión</button>
-             
+              <button type="button" class="btn btn-danger me-2" data-bs-toggle="modal" data-bs-target="#logoutModal">Cerrar sesión</button>
+              <div class="btn-group">
+                <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="{{ url_for('static', filename='img/user.png') }}" alt="Ícono de usuario" style="width: 20px; height: 20px;">
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/inscrito">inicio</a></li>
+                  <li><a class="dropdown-item" href="#">Detalles de la cuenta</a></li>
+                  <li><a class="dropdown-item" href="#">Comprar cuenta premiun</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Ir a Gitup</a></li>
+                </ul>
+              </div>  
               {% else %}
               <a href="/login/" class="btn btn-outline-light me-2">Iniciar Sesión</a>
               <a href="/registro/" class="btn btn-warning">Crear cuenta</a>
               {% endif %}
+              
 
             </div>
             <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
@@ -60,6 +72,7 @@
           </div>
         </div>
       </header>
+      
 
       <div class="container">  
         {% block customcss %}{% endblock %}
